@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqi-Pl-PnV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lista de Tarefas-->
+        <scene sceneID="5rM-ti-SOV">
+            <objects>
+                <viewController title="Lista de Tarefas" id="Gqi-Pl-PnV" customClass="ListaViewController" customModule="Lista_de_Tarefas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l1m-sU-l2J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-lw-fkD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="oNV-JB-LiR" customClass="TarefaTableViewCell" customModule="Lista_de_Tarefas" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oNV-JB-LiR" id="ay4-b6-tal">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Tarefa" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de2-Bb-cle">
+                                                    <rect key="frame" x="28" y="19" width="348" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXb-du-e6m">
+                                                    <rect key="frame" x="384" y="11" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="S7P-oB-fyA"/>
+                                                        <constraint firstAttribute="height" constant="22" id="fe8-AI-xEd"/>
+                                                    </constraints>
+                                                    <state key="normal" image="pencil" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="btnEditarTarefa:" destination="Gqi-Pl-PnV" eventType="touchUpInside" id="MbV-Sx-IZy"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKy-Qb-hhl">
+                                                    <rect key="frame" x="7" y="5" width="8" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="de2-Bb-cle" firstAttribute="top" secondItem="ay4-b6-tal" secondAttribute="topMargin" constant="8" id="J0P-XD-f71"/>
+                                                <constraint firstItem="gXb-du-e6m" firstAttribute="leading" secondItem="de2-Bb-cle" secondAttribute="trailing" constant="8" id="JTO-NA-V04"/>
+                                                <constraint firstItem="gXb-du-e6m" firstAttribute="centerY" secondItem="ay4-b6-tal" secondAttribute="centerY" id="Qip-SR-Fi4"/>
+                                                <constraint firstItem="de2-Bb-cle" firstAttribute="leading" secondItem="ay4-b6-tal" secondAttribute="leadingMargin" constant="8" id="cN3-Ki-hfa"/>
+                                                <constraint firstAttribute="trailing" secondItem="gXb-du-e6m" secondAttribute="trailing" constant="8" id="cNh-d4-e2r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="barraVertical" destination="tKy-Qb-hhl" id="YAw-0a-u8A"/>
+                                            <outlet property="lbTarefa" destination="de2-Bb-cle" id="OTq-yp-kWW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HL-Mu-Nza">
+                                <rect key="frame" x="348" y="796" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="C0g-2n-66P"/>
+                                    <constraint firstAttribute="height" constant="50" id="D6R-3b-bew"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="btnAddTarefa:" destination="Gqi-Pl-PnV" eventType="touchUpInside" id="3Ac-LM-Ms2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vAe-qr-git" firstAttribute="trailing" secondItem="6kw-lw-fkD" secondAttribute="trailing" id="5vd-xQ-MwY"/>
+                            <constraint firstItem="6kw-lw-fkD" firstAttribute="top" secondItem="vAe-qr-git" secondAttribute="top" id="KNJ-pD-2SY"/>
+                            <constraint firstItem="vAe-qr-git" firstAttribute="bottom" secondItem="1HL-Mu-Nza" secondAttribute="bottom" constant="16" id="LOY-qe-IE3"/>
+                            <constraint firstItem="vAe-qr-git" firstAttribute="trailing" secondItem="1HL-Mu-Nza" secondAttribute="trailing" constant="16" id="QIQ-d1-KLM"/>
+                            <constraint firstItem="6kw-lw-fkD" firstAttribute="leading" secondItem="vAe-qr-git" secondAttribute="leading" id="U45-7y-Lwf"/>
+                            <constraint firstItem="vAe-qr-git" firstAttribute="bottom" secondItem="6kw-lw-fkD" secondAttribute="bottom" id="ulQ-1f-mcY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vAe-qr-git"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lista de Tarefas" id="MLT-5m-x3d"/>
+                    <connections>
+                        <outlet property="btnAdd" destination="1HL-Mu-Nza" id="k8L-og-A5s"/>
+                        <outlet property="tableView" destination="6kw-lw-fkD" id="kbC-3t-Bdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6e-z1-kbH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

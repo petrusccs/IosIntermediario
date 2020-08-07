@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TarefaViewController" customModule="Lista_de_Tarefas" customModuleProvider="target">
+            <connections>
+                <outlet property="prioridade" destination="Fiz-Se-ZqP" id="bcu-mC-b0n"/>
+                <outlet property="tarefa" destination="Wp5-X3-9Fb" id="ZaM-yN-KBS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wp5-X3-9Fb">
+                    <rect key="frame" x="16" y="89" width="382" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fiz-Se-ZqP">
+                    <rect key="frame" x="16" y="167.5" width="153" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CES-IY-NWN">
+                    <rect key="frame" x="16" y="60" width="48" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prioridade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-t1-gJz">
+                    <rect key="frame" x="16" y="139" width="79" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36t-L9-lPH">
+                    <rect key="frame" x="16" y="217.5" width="382" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Salvar"/>
+                    <connections>
+                        <action selector="btnSalvarTarefa:" destination="-1" eventType="touchUpInside" id="Ave-Pa-9Kc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Wp5-X3-9Fb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="A9n-9w-Bje"/>
+                <constraint firstItem="36t-L9-lPH" firstAttribute="top" secondItem="Fiz-Se-ZqP" secondAttribute="bottom" constant="16" id="Ctv-Gh-itV"/>
+                <constraint firstItem="Fiz-Se-ZqP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="IYJ-GC-Syn"/>
+                <constraint firstItem="36t-L9-lPH" firstAttribute="width" secondItem="Wp5-X3-9Fb" secondAttribute="width" id="PqB-3c-KXu"/>
+                <constraint firstItem="Fiz-Se-ZqP" firstAttribute="top" secondItem="DJD-t1-gJz" secondAttribute="bottom" constant="8" id="QcF-HZ-1Xv"/>
+                <constraint firstItem="DJD-t1-gJz" firstAttribute="top" secondItem="Wp5-X3-9Fb" secondAttribute="bottom" constant="16" id="Std-8a-dT7"/>
+                <constraint firstItem="Fiz-Se-ZqP" firstAttribute="width" secondItem="Wp5-X3-9Fb" secondAttribute="width" multiplier="0.4" id="Vbt-qz-3e5"/>
+                <constraint firstItem="Wp5-X3-9Fb" firstAttribute="top" secondItem="CES-IY-NWN" secondAttribute="bottom" constant="8" id="Vjk-dI-YcQ"/>
+                <constraint firstItem="CES-IY-NWN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="W9B-y7-8OB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wp5-X3-9Fb" secondAttribute="trailing" constant="16" id="YL4-He-8Je"/>
+                <constraint firstItem="CES-IY-NWN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZuZ-oI-CXO"/>
+                <constraint firstItem="36t-L9-lPH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mKY-rc-f1b"/>
+                <constraint firstItem="DJD-t1-gJz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="xef-sv-kVE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="100.44642857142857"/>
+        </view>
+    </objects>
+</document>
